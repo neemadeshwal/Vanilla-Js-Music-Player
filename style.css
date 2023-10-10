@@ -1,0 +1,366 @@
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color:rgb(1, 27, 25);
+}
+
+.Music-container{
+    background-color: rgba(7, 185, 171, 0.315);
+    padding: 2rem;
+    border-radius: 15px;
+    position: relative;
+    width: 25vw;
+    height: 80vh;
+    }
+
+    /* all the btns styles */
+.right-slide-btn,.show-music-list,.prev-btn,.next-btn,.playpause-btn,.soundmute-btn,.favourite-list-btn,.remove-song{
+    background-color:rgb(3, 54, 50);
+    border: 0;
+    border-radius: 50%;
+    &:hover{
+        background-color: rgb(77, 76, 76);
+    }
+    
+}    
+.right-slide-btn svg,.show-music-list svg,.prev-btn svg,.next-btn svg,.playpause-btn svg,.favourite-list-btn svg,.remove-song svg,.soundmute-btn svg{
+    color: white;
+    font-weight: 600;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+
+}
+.playpause-btn{
+    background-color: rgb(240, 122, 80);
+    transition: 0.3s ease-in-out all;
+
+
+}
+.right-slide-btn{
+    position: absolute;
+    left: 2rem;
+    
+}
+.show-music-list{
+    position: absolute;
+    right: 2rem;
+}
+.music-image{
+    background-color:rgb(3, 58, 3);
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    margin-top: 0;
+    padding-top: 0;
+
+}
+
+.music-title,.artist-name{
+    color: white;
+}
+.music-title{
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.artist-name{
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin-top: 0;
+}
+
+
+.btn{
+    display: flex;
+    gap: 4rem;
+    margin: 2px auto;
+    padding: 0;
+    margin-top: 0;
+
+}
+.music-content-container{
+
+    width: 25vw;
+    position: relative ;
+    margin: 2px auto;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+    overflow: hidden;
+    max-height: 0px;
+
+    
+}
+
+.song-duration-container{
+    margin-top: 6rem;
+width: 80%;
+position: relative;
+
+
+}
+.horizontal-line{
+    width: 100%;
+    height: 9px;
+    border-radius: 10px;
+    background-color: white;
+}
+.song-interval-position{
+    background-color: orangered;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    display: block;
+    position: absolute;
+    /* top: 1px; */
+    bottom:-0.5px;
+}
+
+.btn{
+    position: absolute;
+    bottom: 4rem;
+}
+.repeat-norepeat-icon svg,.is-favourite-icon svg{
+    color: white;
+    width: 30px;
+    height: 30px;
+    
+}
+.repeat-norepeat-icon{
+    position: absolute;
+    bottom: 7rem;
+    left: 0;
+}
+.is-favourite-icon{
+    position: absolute;
+    bottom: 7rem;
+    right: 1rem;
+}
+.animate{
+    transition: 0.3s ease-in-out all;
+    background-color:rgb(3, 54, 50);
+
+}
+.repeat-loop{
+    color: white;
+    transition: 0.2s ease-in-out all;
+    display: block;
+}
+.repeat-same-song{
+    
+    color: hsl(205, 82%, 57%);
+    display: block;
+}
+.hide-svg{
+    display: none;
+}
+.song-list-container,.fav-song-list-container{
+    position: absolute;
+    z-index: 10;
+    overflow: hidden;
+    max-height: 0px;
+   margin-bottom: 2rem;
+    height:70vh;
+    overflow-y: auto;
+    border-radius: 5px;
+}
+.single-song-container{
+   
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0 2px  3px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    padding: 1rem;
+    width: 20vw;
+
+    &:hover{
+        background-color: rgb(2, 48, 44);
+    }
+}
+
+.song-info{
+    color: white;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    font-family: sans-serif;
+
+}
+.song-info h4{
+    font-size: 1.5rem;
+    margin:0;
+}
+.song-info p{
+    margin: 0;
+    margin-top: 5px;
+font-size: 1.1rem;
+color: rgb(168, 168, 168);
+text-transform: lowercase;
+
+}
+.show-container{
+ display: block
+;
+}
+.sidebar-btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 10vw;
+    margin: 2px auto;
+    visibility: hidden;
+}
+.show-container-btn{
+    visibility: visible;
+}
+
+.sound-btn{
+    display: none;
+}
+.mute-btn{
+    display: none;
+}
+
+.fav-btn{
+    display: none;
+}
+.not-fav-btn{
+    display: none;
+}
+.show-btn{
+    display: block;
+}
+
+.fav-song-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 2px 3px rgba(0,0,0,0.1);
+
+}
+.fav-song-info {
+    color: white;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    font-family: sans-serif;
+}
+.fav-song-info h4{
+    font-size: 1.5rem;
+    margin:0;
+}
+.fav-song-info p{
+    margin: 0;
+    margin-top: 5px;
+font-size: 1.1rem;
+color: rgb(168, 168, 168);
+text-transform: lowercase;
+}
+.control-btns{
+    display: flex;
+    gap: 1rem;
+}
+.fav-song-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0 2px  3px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    width: 23vw;
+    padding: 1rem;
+    margin:2px auto;
+
+    &:hover{
+        background-color: rgb(2, 48, 44);
+    }
+}
+.active{
+    max-height: 80vh;
+}
+.slidecontainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    
+  }
+  .current-time,.total-duration{
+    color:rgba(255, 255, 255, 0.678);
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    margin-top: 2.7rem;
+    font-weight: lighter;
+    
+  }
+  
+  .slider {
+    -webkit-appearance: none;
+    margin: 2px auto;
+    width: 80%;
+    height: 10px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+
+  }
+  
+  .slider:hover {
+    opacity: 1;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #04AA6D;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #04AA6D;
+    cursor: pointer;}
+
+    .fav-list-heading{
+        color: white;
+        font-size: 2rem;
+        font-family: sans-serif;
+    }
+    .look-for-empty-list{
+        font-size: 1.4rem;
+        color: rgb(180, 179, 179);
+    }
+    .bi-chevron-up,.bi-chevron-right{
+        display: none;
+    }
+
+    .show-btn{
+        display: block;
+    }
+
+  
+        
+     
+    
+    
+      
