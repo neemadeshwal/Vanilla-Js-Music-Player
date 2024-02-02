@@ -7,6 +7,7 @@ body{
     background-color:rgb(1, 27, 25);
 }
 
+
 .Music-container{
     background-color: rgba(7, 185, 171, 0.315);
     padding: 2rem;
@@ -29,8 +30,8 @@ body{
 .right-slide-btn svg,.show-music-list svg,.prev-btn svg,.next-btn svg,.playpause-btn svg,.favourite-list-btn svg,.remove-song svg,.soundmute-btn svg{
     color: white;
     font-weight: 600;
-    width: 40px;
-    height: 40px;
+    width: 25px;
+    height: 25px;
     padding: 10px;
 
 }
@@ -45,6 +46,7 @@ body{
     left: 2rem;
     
 }
+
 .show-music-list{
     position: absolute;
     right: 2rem;
@@ -52,8 +54,8 @@ body{
 .music-image{
     background-color:rgb(3, 58, 3);
     border-radius: 50%;
-    width: 250px;
-    height: 250px;
+    width: 180px;
+    height: 180px;
     margin-top: 0;
     padding-top: 0;
 
@@ -63,13 +65,13 @@ body{
     color: white;
 }
 .music-title{
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     letter-spacing: 2px;
     font-weight: 400;
     margin-bottom: 10px;
 }
 .artist-name{
-    font-size: 1.2rem;
+    font-size: 1rem;
     letter-spacing: 1px;
     font-weight: 400;
     margin-top: 0;
@@ -109,15 +111,15 @@ position: relative;
 }
 .horizontal-line{
     width: 100%;
-    height: 9px;
+    height: 7px;
     border-radius: 10px;
     background-color: white;
 }
 .song-interval-position{
     background-color: orangered;
     border-radius: 50%;
-    width: 22px;
-    height: 22px;
+    width: 18px;
+    height: 18px;
     display: block;
     position: absolute;
     /* top: 1px; */
@@ -126,12 +128,12 @@ position: relative;
 
 .btn{
     position: absolute;
-    bottom: 4rem;
+    bottom: 1.5rem;
 }
 .repeat-norepeat-icon svg,.is-favourite-icon svg{
     color: white;
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     
 }
 .repeat-norepeat-icon{
@@ -196,13 +198,13 @@ position: relative;
 
 }
 .song-info h4{
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     margin:0;
 }
 .song-info p{
     margin: 0;
     margin-top: 5px;
-font-size: 1.1rem;
+font-size: 1rem;
 color: rgb(168, 168, 168);
 text-transform: lowercase;
 
@@ -261,7 +263,7 @@ text-transform: lowercase;
 .fav-song-info p{
     margin: 0;
     margin-top: 5px;
-font-size: 1.1rem;
+font-size: 1rem;
 color: rgb(168, 168, 168);
 text-transform: lowercase;
 }
@@ -291,12 +293,12 @@ text-transform: lowercase;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin-top: 2rem;
+    margin-top: 1rem;
     
   }
   .current-time,.total-duration{
     color:rgba(255, 255, 255, 0.678);
-    font-size: 1.1rem;
+    font-size: 1rem;
     letter-spacing: 2px;
     margin-top: 2.7rem;
     font-weight: lighter;
@@ -343,11 +345,11 @@ text-transform: lowercase;
 
     .fav-list-heading{
         color: white;
-        font-size: 2rem;
+        font-size: 1.2rem;
         font-family: sans-serif;
     }
     .look-for-empty-list{
-        font-size: 1.4rem;
+        font-size: 1rem;
         color: rgb(180, 179, 179);
     }
     .bi-chevron-up,.bi-chevron-right{
@@ -357,6 +359,12 @@ text-transform: lowercase;
     .show-btn{
         display: block;
     }
+    .right-slide-btn>*{
+        width: 10px;
+        height: 10px;
+    }
+
+   
 
   
         
